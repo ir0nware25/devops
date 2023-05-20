@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'docker build -t vvictor2/jenkins-docker-hub .'
+        sh 'docker build -t vvictor2/jenkins-docker-hub:nginx-devops-v$BUILD_NUMBER .'
       }
     }
     stage('Login') {
@@ -19,7 +19,7 @@ pipeline {
     }
     stage('Push') {
       steps {
-        sh 'docker push aeonmike/jenkins-docker-hub'
+        sh 'docker push mikejc30/jenkins-docker-hub:nginx-devops-v$BUILD_NUMBER'
       }
     }
   }
@@ -29,4 +29,3 @@ pipeline {
     }
   }
 }
-
