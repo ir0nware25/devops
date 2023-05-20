@@ -19,7 +19,7 @@ pipeline {
     }
     stage('Push') {
       steps {
-        sh 'docker push mikejc30/jenkins-docker-hub:nginx-devops-v$BUILD_NUMBER'
+        sh 'docker push vvictor2/jenkins-docker-hub:nginx-devops-v$BUILD_NUMBER'
       }
     }
   }
